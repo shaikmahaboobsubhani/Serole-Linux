@@ -1,0 +1,38 @@
+			  Static Web Hosting / Managing Services
+
+
+Websevers managing:
+
+webservers are nothing but need to host an static web application
+
+those are ywo types depends on the linux families 
+
+1: Debian : need to install apache2
+2: Redhat : need to install httpd
+
+1: Install httpd
+
+2: service start/stop/restart httpd
+
+3: deploying static webappliction in /var/www/html path
+
+4: index.html (.html) extension is must (hyper text markup language)
+
+5: finally service httpd will be restarts
+
+Debian :
+
+1: install apache2
+
+2: service start/stop/restart apache2
+
+3: deploying static webappliction in /var/www/html path
+
+4: index.html (.html) extension is must (hyper text markup language)
+
+5: finally service apache2 will be restarts
+
+
+Note: Need to open 80 port compulsory
+
+80 port for static web applications(httpd/apache2..etc)

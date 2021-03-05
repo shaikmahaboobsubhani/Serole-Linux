@@ -1,0 +1,28 @@
+$pwd: present working directory
+
+$ls: it displays list of files and directories
+
+$ ls -ll : it displays long list of the files along with permissions and creation date, userid.
+
+$ ls -a : it displays hideen fies and directories
+
+$ ls -latr: it displays last created/midified files in last by using list in time ratio
+
+$mkdir dirname : it create a directory in linux
+  ex: mkdir jaani
+$ rm -rf dirname/file name : it removes/deletes the file /directory
+  ex: rm -rf jaani
+  Note: -rf : remove forcefully
+#cd dirname : to change the directories from one place to another place
+  ex: cd jaani
+
+$cd .. : by using this command to get back from directory to normal position
+ ex: cd ..
+$ cd dirname/dirname : to change the 2 postions of directories
+  ex: cd jaani/sms
+$ cd ../.. : to get back 2 positions fron original directory
+  ex: cd ../..
+  
+
+
+

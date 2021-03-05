@@ -1,0 +1,36 @@
+Remote Access :
+
+Remote access is nothing but we can control the another system or we can access the another system into our system 
+
+Clien side:
+
+who will share the control to another
+
+Configuration:
+
+1: Enable Root Access  :  vi /etc/ssh/sshd_config
+
+2: Enable Password authentication : vi /etc/ssh/sshd_config
+
+setting a password for root
+3: Enable / Restart the sshd service 
+4: create a file and name it as file.pem which are using for accessing the server 
+
+changing the / modifying the permission 600 to that file
+
+
+
+Server: 
+
+who will access the control/ take the contro
+
+we can share the filename.pem to the client
+
+2: take the control
+
+
+ssh root@34.207.152.67 -i/root/Suse-12sp3.pem
+
+$ ssh username@client-ip -i/root/.pem (file location)
+
+yes / no enter y and give the password

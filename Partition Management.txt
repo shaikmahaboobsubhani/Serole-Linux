@@ -1,0 +1,180 @@
+
+
+
+Partition Management:
+
+
+Partition is nothing but to divide a  single drive (Hard disk) into number of logical drives
+
+a partion is nothing but contiguos set of blocks on a drive that are treated as independent disks 
+
+Partion table is an index that related to the section of hard drive partitions
+
+File system types in linux:
+
+1) ext1
+2) ext2
+3) ext3
+4) ext4 (advanced level)
+
+
+Explore : https://www.javatpoint.com/linux-file-system
+
+$ fdisk -l : to list out the available disks in linux
+
+if you want to crate a another disk / mew disk from the existing vol we can select that volume first by using below command
+
+$ fdisk diskname
+
+$ fdisk /dev/xdf/xfadf/xdmdm/btd .....etc
+
+and then  if you don't know how to create the volume simply press 'm' for help it will gives you the instructions
+
+Help:
+
+  DOS (MBR)
+   a   toggle a bootable flag
+   b   edit nested BSD disklabel
+   c   toggle the dos compatibility flag
+
+  Generic
+   d   delete a partition
+   F   list free unpartitioned space
+   l   list known partition types
+   n   add a new partition
+   p   print the partition table
+   t   change a partition type
+   v   verify the partition table
+   i   print information about a partition
+
+  Misc
+   m   print this menu
+   u   change display/entry units
+   x   extra functionality (experts only)
+
+  Script
+   I   load disk layout from sfdisk script file
+   O   dump disk layout to sfdisk script file
+
+  Save & Exit
+   w   write table to disk and exit
+   q   quit without saving changes
+
+  Create a new label
+   g   create a new empty GPT partition table
+   G   create a new empty SGI (IRIX) partition table
+   o   create a new empty DOS partition table
+   s   create a new empty Sun partition table
+
+
+
+here if you wantted to create a new disk you can simply press 'n'
+ then it will ask us to provide partion type
+
+Partition type
+
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+
+
+
+and the you can save and exit the disk partion for simply press 'w'
+
+and then you can format the disk and mounted to any other directory for storing your data
+
+$ mkfs.ext4 diskname
+
+$ mkfs.ext4 /dev/xvdf1 
+
+and then mount the formatted disk to the dir
+
+$ mount diskname dirname
+
+$ mount /dev/xvdf1 jaani/
+
+if you wanted to check the free diskspaces in linux
+
+$ df -h
+
+if you wanted to check the disk usage in linux
+
+$ du -h
+
+if you wanted to check the specific disk usage in linux
+
+$ du -h diskname/dir name
+
+
+$ du -h jaani/
+
+
+
+LVM(Logical Volume Management)
+
+1:pv create : Phical volume 
+2:vg create : volume groupname for phisical volume
+3: lv create  : large volume with the help of vg name
+
+	$pvcreate diskname
+	
+ex: 
+	$ pvcreate /dev/xvdg
+output: Physical volume created
+
+To display phisical vol path and info
+
+$pvdisplay
+
+next i wamted to craete vg name
+
+$ vgcreate volgrouoname diskname
+
+$ vgcreate subbu /dev/xvdg
+
+To display vg name and info
+
+$ vgdisplay 
+
+LVM create :
+
+$ lvcraete -L+5G -n lvcraetename vgcreatename
+
+ex: lvcreate -L + 5G -n sms subbu
+
+Logical volume created
+
+i wanted to format and mounted to dir
+
+$ mkfs.ext4 lvpath(/dev/subbu/sms)
+
+ ex:  --- Logical volume ---
+  LV Path                /dev/subbu/sms
+  LV Name                sms
+  VG Name                subbu
+  LV UUID                PmPo0m-1c2A-FwcR-VKqC-UQfU-UGme-0j2NiS
+  LV Write Access        read/write
+  LV Creation host, time Linux, 2020-10-21 02:51:16 +0000
+  LV Status              available
+  # open                 0
+  LV Size                5.00 GiB
+  Current LE             1280
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           253:0
+
+mount the logical vol to dir:
+
+mount /dev/subbu/sms sns
+
+
+
+
+
+
+
+ 
+
+
+

@@ -1,0 +1,37 @@
+					Course Overview
+
+Linux:
+
+Basis Commands
+File Permissions
+User Management
+Group Management
+Partition Management/LVM
+Package Management
+N/w Related Commands
+
+AWS:
+
+EC2 --  				: Elastic Cloud Computing
+VPC    (Live Project)			: Virtual Private Cloud
+IAM					: Identity Access Management
+Autoscaling				
+Loadbalancer (Project)
+SNS					: Simple Notification  Service
+S3 Bucket				: Simple Storage Service
+RDS					: Relational Databases
+ElasticBealn Stack  (Live Project)	: Deployment Purpose(Static Applications)
+Cloud watch
+Terraform
+Cloud Formation
+Lamda Functions  (Live Project)
+
+DevOps:
+
+Github
+Apchemaven
+Docker
+Docker Swarm
+Ansible
+Kubernetes
+Jenkins

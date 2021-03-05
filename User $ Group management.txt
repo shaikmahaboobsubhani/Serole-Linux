@@ -1,0 +1,131 @@
+                User Management & Group Management along with Changing the ownership  
+
+
+
+creation of user:
+
+2 ways to crate users in linux:
+
+1: useradd username
+
+2: adduser username
+
+
+ex: useradd sms
+     
+    useradd jilani
+
+Users home directory will be: /etc/passwd
+
+jaani:x:1002:1003::/home/jaani:/bin/bash
+
+Paasword Conf file: cat /etc/shadow
+
+To create a password for  the user:
+
+$ passwd username 
+ ex: passwd subhani
+
+/etc/shadow in this file passsword will be stored in encrypted format
+
+jaani:x:1002:1003::/home/jaani:/bin/bash
+
+username : passwordlink(/etc/passwd) :: /home(users homedir)/username : command line (/bin/bash)
+
+Note: by default if we created a user automatically group aslo be created
+
+Group Management:
+
+Users are assigned to the group with unique group id
+
+group name and group id will stored in grouop home directory : /etc/group 
+
+ex: cat /etc/group
+
+
+each user given  their own private group,and all users can share the files that belon to the group
+
+
+Create a Group:
+
+groupadd is a command to create group in linux
+
+$ groupadd groupname(devops)
+ex: $ groupadd DevOps
+
+If we want to create our own groupname with our own groupid
+
+Syntax: $ groupadd -g groupid groupname
+   
+     -g to provide our own groupid
+
+ex: groupadd -g 1010 aws
+
+Modifying the properties of the group:
+
+if i wanted to modify the already created grouid
+
+Synatx: groupmod <options> <arguments> <groupname>
+
+  	 ex: groupmod -g 1020 aws
+
+if i wanted to modify the already created group name
+	Synatx: groupmod <options> <new groupname> <old groupname>
+
+	 ex: $ groupmod -n  new groupname oldgroupname
+
+ Adding and Removing the users to group:
+
+To add a single user to the group
+
+$ usermod -G <groupname> <username>
+
+ex: usermod -G jilani jaani
+	
+    jilani:x:1020:jaani
+
+Add Multiple users to the group:
+
+Stntax: gpasswd -M username1,username2,....usernamen groupname
+
+ex: gpasswd -M linux,mahaboob,jaani,subhani jilani
+
+-M for add multiple users  in group 
+
+To add a single user of the group as a Administrator
+
+Syntax: gpasswd -A username groupname
+
+ ex: $ gpasswd -A mahaboob jilani
+  -A for add group member as a administrator
+
+
+Removig the user from the group :
+
+Syntax: gpasswd -d username groupname
+
+ $ gpasswd -d subhani jilani
+
+ output: Removing user subhani from group jilani
+
+ -d for removing the user from the group
+
+
+
+Changing the Owner ship of the file
+
+Syntax: chown username:groupname filename
+
+ex: chown subhani:jilani mahi
+
+output: ex:-rwxrwxrwx 1 subhani jilani  0 Oct 12 03:02 mahi
+
+
+
+
+
+
+
+
+
+ 

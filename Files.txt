@@ -1,0 +1,85 @@
+How To Create The Files
+
+3 ways
+
+1.cat : this is used to create the files and modifiled the files and view the files
+2.touch : by using touch command we can create only temporary files and we cam create number of files at a time and empty files
+3. vi (virtual Editor)  : this is used to create the files and modifiled the files and view the files
+
+Let's get started for practice:
+
+Cat:
+to craete the file
+ $cat > filename 
+
+ ex: cat > sms (file name)
+To view the file 
+ $ cat filename
+  
+ ex: cat sms(filename)
+
+To appaned the file / modify the file 
+ 
+  $ cat >> oldfilename
+
+  ex: cat >> sms (>> is to used for append mode)
+To create the file by using touch command :
+ 
+  $ touch filename
+  
+  ex: touch sms(filename)
+   
+ Note: by default tocuh command will create the empty files only
+To crate multiple files by using touch command
+
+ $ touch filename1 filename2 filename3 ....... filename n
+  
+  ex: $ touch basha subhani jilani (file names)
+
+To crate a file by using vi(virtual editor) 
+
+ $ vi filename
+
+ex: vi mahi(filename) by default it is in commad mode for editing the file we can switch into inssert mode by using i (" i " )
+ 
+   i :  insert mode
+
+To save and quit the file by using 
+
+$  Esc + shift : + wq 
+   
+   Note:  wq(save and quit)
+
+we have 3 Modes in files :
+  1. command mode
+  2. insert mode
+  3. execution mode
+To copy the content from one file to another file by using cp (copy command)
+
+$ cp oldfilename newfilename 
+ ex: cp sms mahi
+To move/ rename the file by using mv (move command)
+
+$ mv oldfilename newfilename 
+
+
+diff b/w cp and mv is " to copy the file old file also present in the system" but by using mv command " to rename the file" means old file was removed and content was be present in newfile name
+
+ 
+Command mode:
+
+Once you open the file by using vi/vim editor , editor will bw opended be default it will be in an command mode , so we cann't modify/edit the file/insert the files (simply view of some content in file).
+
+Insertmode:
+
+in this mode you can edot the file and modify the file 
+bu using  click on "i" command mode will be switched into insert mode , so that we can edit the file / modify the files
+
+
+Extend mode:
+
+in this mode you can save and exit froma file / we can exit without saving a file
+
+
+
+

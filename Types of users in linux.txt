@@ -1,0 +1,42 @@
+Types of users in linux:
+
+4 types of users linux:
+
+1: super user  -- if make sudo -i it will goes to root user , root user userid is 0(ZERO)
+
+2: system users -- Linux treats installed s/w as system users and it will starts from 1 to end with 499 in b/w these users name it as system users
+
+3: normal users : normal users also be users who are created by the superuser(root) , normal user id starts from 500 end with 63000+ 
+ 
+4: sudo users : stands for superuser root /super do 
+
+we can add normal user into sudoers file/visudo then he will be become as as sudouser then he will get additional permissions  than normal user
+
+
+Swithing the  user:
+
+$ su - username
+
+$ su - jaani
+ ex: [root@Linux ~]# su - jaani
+     [jaani@Linux ~]$
+
+
+
+visudo , we can make  normaluser (mahaboob) into sudo user, so that we can add user in below location of visudo file
+
+
+## Allows people in group wheel to run all commands
+
+%wheel  ALL=(ALL)       ALL
+%mahaboob ALL=(ALL)       ALL
+## Same thing without a password
+
+
+
+Note: if you can user sudoers users infront the command give sudo every time
+
+$ sudo mkdir dirname
+$ sudo ls
+$ sudo useradd username
+$ sudo cat /etc/passwd ......etc

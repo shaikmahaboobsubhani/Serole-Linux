@@ -1,0 +1,76 @@
+Package Management:
+
+Package is nothing but s/w in linux , depends upon the user's requirement we can install/uninstall the package/software in linux that is called as package management
+
+in linux we have two types of linux distributions so we can install two types for linux families
+
+
+1: RedHat
+2: Debian
+
+
+
+RedHat Package Management(rpm)
+
+if we need to install a s/w , we  need to download the s/w then we can install.
+
+you need to download and install .rpm packagesI(.rpm redhat package management)
+
+if we have .rpm file /package we can install by using
+
+$rpm -ivh(install verbrose file) filename
+$ rpm -ivh java89y3i4.rpm
+
+
+
+Debian Package Managemenet(.deb)
+
+if we need to install a s/w , we  need to download the s/w then we can install.
+
+you need to download and install .deb packagesI(.deb Debian package management)
+
+if we have .deb file /package we can install by using
+
+$ deb -ivh filename
+
+$ deb -ivh java8jdfdnfdd.deb
+
+
+
+i  these two processes we are not installing dependencies directly
+
+YUM for RedHat (yellow dog update management)
+Apt for debian (Advance Packing Tool)
+
+
+Installing Package Management by using Yum:
+
+$ yum install packagename -y
+
+$ yum install java -y
+
+
+un-installing the package by using Yum:
+
+$ yum remove packagename -y
+
+$ yum remove java -y
+
+
+Note: in these process we are no need to install the dependencies
+
+Installing Package Management by using APT:
+
+$ apt-get install packagename -y
+
+$ apt-get install java -y
+
+
+un-installing the package by using Yum:
+
+$ apt-get remove packagename -y
+
+$ apt-get remove java -y
+
+
+Note: in these process we are no need to install the dependencies

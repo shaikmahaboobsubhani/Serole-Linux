@@ -1,0 +1,80 @@
+File Permissions:
+ 
+File permissions nothing but you can assign a permissions to the file / (in Linux ) directories    (Folders in windows)
+
+
+we have 3 types of file permissions :
+
+Symbolic Notations:
+
+1: Read		- r
+
+2: Write	- w
+
+3: Execute	- x
+
+Numerical Notations:
+
+Read - 4 
+
+Write - 2 
+
+Execute - 1   
+
+
+
+Full Permissions : 777
+
+3 Levels of File Permissions:
+
+ 1: User  -- we can give a permissions to the  user (Owner of the file)
+ 2: Group  -- we can give permissions to the Group  ( Permissons associates to the memebers specific root)
+ 3: Others -- we can give  permissio s to the Others (not a owner the files and  not i  group)
+
+
+Note: by default file permssion is 644
+ex: -rw-r--r--  1 root root    0 Oct 12 03:02 mahi
+    
+    -4+2 -4--4--: -6-4-4
+    -User-Group-Others
+     6      4     4     : by default file permissions
+
+Changing the file permissions(in symbolic mode)
+
+$chmod u=rwx filename
+$chmod u=rwx mahi
+ex: 
+-rwxr--r-- 1 root root  0 Oct 12 03:02 mahi
+
+$  chmod ug+wx sms/
+
+   here we can assign permissios to the user and group with write and executable permisiions
+
+If i want to remove the file permissios
+
+$ chmod ugo-rwx filename/directory
+$ chmod ug+x/ug+r/uo+w/go+r/...etc filename/directory name
+
+
+Numeric Notations:
+
+i wanyed to give rxx for file
+                 411
+
+$chmod 411 filename(sb)
+ -r----x--x 1 root root  0 Oct 12 03:19 sb
+
+Full Permissions:
+
+$chmod 777 sb
+
+-rwxrwxrwx 1 root root  0 Oct 12 03:19 sb
+$ chmod 522 sb
+-r-x-w--w- 1 root root  0 Oct 12 03:19 sb
+
+
+Changing the Ownership of the file:
+
+
+
+
